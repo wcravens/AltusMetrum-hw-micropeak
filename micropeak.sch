@@ -8,6 +8,12 @@ T 46900 48100 5 10 1 1 0 0 1
 refdes=U1
 T 42400 48100 5 10 1 1 0 0 1
 device=ATtiny85
+T 41995 44475 5 10 0 1 0 0 1
+vendor=digikey
+T 41995 44475 5 10 0 1 0 0 1
+vendor_part_number=ATTINY85-20SU-ND
+T 41995 44475 5 10 0 1 0 0 1
+loadstatus=smt
 }
 C 52300 45500 1 0 1 MS5611.sym
 {
@@ -17,6 +23,10 @@ T 52005 47695 5 10 1 1 0 6 1
 refdes=U2
 T 52305 42295 5 10 0 1 0 6 1
 footprint=MS5611
+T 52305 42295 5 10 0 1 0 6 1
+vendor=measspec
+T 52305 42295 5 10 0 1 0 6 1
+vendor_part_number=MS5611
 }
 C 48400 43400 1 270 0 battery-1.sym
 {
@@ -28,6 +38,12 @@ T 49700 43100 5 10 0 0 270 0 1
 symversion=0.1
 T 48400 43400 5 10 0 0 270 0 1
 footprint=bhx1-1025-sm
+T 48400 43400 5 10 0 0 270 0 1
+vendor=digikey
+T 48400 43400 5 10 0 0 270 0 1
+vendor_part_number=BHX1-1025-SM-ND
+T 48400 43400 5 10 0 0 270 0 1
+loadstatus=smt;
 }
 C 48100 42300 1 0 0 gnd-1.sym
 C 48000 43500 1 0 0 3.3V-plus-1.sym
@@ -44,10 +60,16 @@ T 41400 46800 5 10 1 1 180 0 1
 refdes=C1
 T 40800 46300 5 10 0 0 90 0 1
 symversion=0.1
-T 41700 46100 5 10 0 0 0 0 1
-footprint=0402
 T 40800 46300 5 10 1 1 0 0 1
 value=0.1uF
+T 41700 46100 5 10 0 0 0 0 1
+footprint=0402
+T 41700 46100 5 10 0 0 0 0 1
+vendor=digikey
+T 41700 46100 5 10 0 0 0 0 1
+vendor_part_number=399-3027-1-ND
+T 41700 46100 5 10 0 0 0 0 1
+loadstatus=smt
 }
 N 47500 46500 50000 46500 4
 {
@@ -90,6 +112,12 @@ T 52600 47300 5 10 0 1 0 0 1
 footprint=0402
 T 52900 46600 5 10 1 1 0 0 1
 value=0.1uF
+T 41700 46100 5 10 0 0 0 0 1
+vendor=digikey
+T 41700 46100 5 10 0 0 0 0 1
+vendor_part_number=399-3027-1-ND
+T 41700 46100 5 10 0 0 0 0 1
+loadstatus=smt
 }
 N 52500 45700 52500 46500 4
 N 52500 46500 52300 46500 4
@@ -106,9 +134,15 @@ refdes=C3
 T 48500 43300 5 10 0 0 270 0 1
 symversion=0.1
 T 47300 42700 5 10 1 1 0 0 1
-value=10uF
+value=4.7uF
 T 47600 43500 5 10 0 1 0 0 1
 footprint=0402
+T 54600 42000 5 10 0 0 0 0 1
+vendor_part_number=490-5408-1-ND
+T 54600 42000 5 10 0 0 0 0 1
+vendor=digikey
+T 54600 42000 5 10 0 1 0 0 1
+loadstatus=smt
 }
 N 47800 43500 48600 43500 4
 N 47800 42600 48600 42600 4
@@ -156,6 +190,12 @@ T 47500 45400 5 10 0 0 0 0 1
 footprint=0402
 T 48000 45700 5 10 1 1 0 0 1
 value=270
+T 47500 45400 5 10 0 0 0 0 1
+vendor=digikey
+T 47500 45400 5 10 0 0 0 0 1
+vendor_part_number=541-270LCT-ND
+T 47500 45400 5 10 0 0 0 0 1
+loadstatus=smt
 }
 N 48400 45500 49000 45500 4
 C 48900 44300 1 0 0 gnd-1.sym
@@ -171,3 +211,27 @@ T 52000 40100 9 10 1 0 0 0 1
 1
 T 50000 40400 9 10 1 0 0 0 1
 micropeak.sch
+C 53700 43700 1 0 0 hole_plated.sym
+{
+T 53800 45400 5 10 0 0 0 0 1
+device=HOLE_PLATED
+T 53800 44200 5 10 1 1 0 0 1
+refdes=H1
+T 53700 43700 5 10 0 0 0 0 1
+footprint=hole-M2.5
+T 53700 43700 5 10 0 1 0 0 1
+loadstatus=noload
+}
+C 53700 42900 1 0 0 hole_plated.sym
+{
+T 53800 44600 5 10 0 0 0 0 1
+device=HOLE_PLATED
+T 53800 43400 5 10 1 1 0 0 1
+refdes=H2
+T 53700 42900 5 10 0 0 0 0 1
+footprint=hole-M2.5
+T 53700 42900 5 10 0 1 0 0 1
+loadstatus=noload
+}
+C 54200 42800 1 0 0 gnd-1.sym
+N 54300 43900 54300 43100 4
