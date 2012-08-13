@@ -138,7 +138,7 @@ value=4.7uF
 T 47600 43500 5 10 0 1 0 0 1
 footprint=0402
 T 54600 42000 5 10 0 0 0 0 1
-vendor_part_number=490-5408-1-ND
+vendor_part_number=445-5947-1-ND
 T 54600 42000 5 10 0 0 0 0 1
 vendor=digikey
 T 54600 42000 5 10 0 1 0 0 1
@@ -178,13 +178,13 @@ refdes=D1
 T 49500 45400 5 10 0 0 270 0 1
 device=LED
 T 49100 44700 5 10 1 1 0 0 1
-value=red
+value=blue
 T 48900 45500 5 10 0 1 0 0 1
 footprint=0603diode
 T 48900 45500 5 10 0 1 0 0 1
 vendor=digikey
 T 48900 45500 5 10 0 1 0 0 1
-vendor_part_number=160-1433-1-ND
+vendor_part_number=754-1434-1-ND
 T 48900 45500 5 10 0 1 0 0 1
 loadstatus=smt
 }

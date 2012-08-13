@@ -43,6 +43,7 @@ $(PROJECT).bottom.gbr:	$(PROJECT).pcb
 	pcb -x gerber $(PROJECT).pcb
 
 zip:	$(PROJECT).bottom.gbr $(PROJECT).bottommask.gbr $(PROJECT).fab.gbr $(PROJECT).top.gbr $(PROJECT).topmask.gbr $(PROJECT).toppaste.gbr $(PROJECT).topsilk.gbr $(PROJECT).plated-drill.cnc $(PROJECT).xy  Makefile # $(PROJECT).xls
+	rm -f $(PROJECT).zip
 	zip $(PROJECT).zip $(PROJECT).*.gbr $(PROJECT).*.cnc $(PROJECT).xy # $(PROJECT).xls
 
 clean:
