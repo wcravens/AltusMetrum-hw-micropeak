@@ -8,7 +8,7 @@ drc:	$(PROJECT).sch Makefile
 
 partslist:	$(PROJECT).sch Makefile
 	gnetlist -g bom -o $(PROJECT)-bom.unsorted $(PROJECT).sch
-	(head -n1 $(PROJECT)-bom.unsorted && tail -n+2 $(PROJECT)-bom.unsorted | sort) | nickle ./retab >> partslist
+	(head -n1 $(PROJECT)-bom.unsorted && tail -n+2 $(PROJECT)-bom.unsorted | sort) | nickle ./retab > partslist
 	rm -f $(PROJECT)-bom.unsorted
 
 partslist.csv:	$(PROJECT).sch Makefile gnet-partslist-keithp.scm

@@ -43,7 +43,7 @@ vendor=digikey
 T 48400 43400 5 10 0 0 270 0 1
 vendor_part_number=BHX1-1025-SM-ND
 T 48400 43400 5 10 0 0 270 0 1
-loadstatus=smt;
+loadstatus=smt
 }
 C 48100 42300 1 0 0 gnd-1.sym
 C 48000 43500 1 0 0 3.3V-plus-1.sym
@@ -156,6 +156,14 @@ T 47800 44500 5 10 0 0 0 0 1
 footprint=pico-ezmate-2
 T 47800 44500 5 10 0 0 0 0 1
 loadstatus=smt
+T 47800 44500 5 10 0 0 0 0 1
+vendor=digikey
+T 47800 44500 5 10 0 0 0 0 1
+vendor_part_number=WM4459CT-ND
+T 47800 44500 5 10 0 0 0 0 1
+device=CONNECTOR
+T 47800 44500 5 10 0 0 0 0 1
+value=2 pin
 }
 N 47500 45000 47800 45000 4
 {
