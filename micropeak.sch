@@ -3,7 +3,7 @@ C 40000 40000 0 0 0 title-B.sym
 C 42000 44500 1 0 0 attiny85.sym
 {
 T 41995 44475 5 10 0 1 0 0 1
-footprint=QFN20_4
+footprint=MO-220
 T 46900 48100 5 10 1 1 0 0 1
 refdes=U1
 T 42400 48100 5 10 1 1 0 0 1
