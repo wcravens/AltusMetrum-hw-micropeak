@@ -233,5 +233,16 @@ footprint=hole-M2.5
 T 53700 42900 5 10 0 1 0 0 1
 loadstatus=noload
 }
-C 54200 42800 1 0 0 gnd-1.sym
-N 54300 43900 54300 43100 4
+C 54200 41900 1 0 0 gnd-1.sym
+N 54300 42200 54300 43900 4
+C 53700 42100 1 0 0 hole_plated.sym
+{
+T 53800 43800 5 10 0 0 0 0 1
+device=HOLE_PLATED
+T 53800 42600 5 10 1 1 0 0 1
+refdes=H3
+T 53700 42100 5 10 0 0 0 0 1
+footprint=hole-M2.5
+T 53700 42100 5 10 0 1 0 0 1
+loadstatus=noload
+}
