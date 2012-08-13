@@ -153,7 +153,7 @@ C 47800 44500 1 0 0 conn-2.sym
 T 48105 45145 5 10 1 1 0 0 1
 refdes=J1
 T 47800 44500 5 10 0 0 0 0 1
-footprint=picoblade-smt-2
+footprint=pico-ezmate-2
 T 47800 44500 5 10 0 0 0 0 1
 loadstatus=smt
 }

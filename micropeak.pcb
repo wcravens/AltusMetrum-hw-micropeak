@@ -3,10 +3,10 @@
 # To read pcb files, the pcb version (or the git source date) must be >= the file version
 FileVersion[20070407]
 
-PCB["" 70000 56000]
+PCB["MicroPeak" 70000 56000]
 
 Grid[100.0 0 0 0]
-Cursor[23100 1400 0.000000]
+Cursor[0 0 0.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[500 1000 500 500 1500 650]
@@ -798,7 +798,7 @@ Via[26500 15100 3600 2000 0 2000 "" "thermal(1S)"]
 Via[32400 48100 3600 2000 0 2000 "" "thermal(1S)"]
 Via[49500 22500 3600 2000 0 2000 "" ""]
 Via[46600 46500 3600 2000 0 2000 "" ""]
-Via[17600 27000 3600 2000 0 2000 "" "thermal(1S)"]
+Via[21200 30300 3600 2000 0 2000 "" "thermal(1S)"]
 
 Element["" "0603diode" "D1" "red" 35000 52500 -11800 -3000 0 100 ""]
 (
@@ -810,20 +810,11 @@ Element["" "0603diode" "D1" "red" 35000 52500 -11800 -3000 0 100 ""]
 
 	)
 
-Element["" "picoblade-smt-2" "J1" "unknown" 17618 20500 -15261 -3539 0 100 ""]
-(
-	Pad[-1575 -2461 1575 -2461 3150 600 3450 "1" "1" "square,edge2"]
-	Pad[-1575 2461 1575 2461 3150 600 3450 "2" "2" "square,edge2"]
-	Pad[-13190 -12500 -9646 -12500 8268 600 8568 "GND" "GND" "square"]
-	Pad[-13190 12500 -9646 12500 8268 600 8568 "GND" "GND" "square"]
-
-	)
-
 Element["onsolder" "bhx1-1025-sm" "B1" "unknown" 35000 30800 -22200 22000 0 100 "auto"]
 (
-	Pad[-29500 -5000 -29500 5000 10000 1000 10500 "GND" "2" "onsolder,square,edge2"]
-	Pad[0 0 0 0 20000 1000 20500 "VCC" "1" "onsolder,square"]
-	Pad[29500 -5000 29500 5000 10000 1000 10500 "GND" "2" "onsolder,square,edge2"]
+	Pad[-29500 -5000 -29500 5000 10000 1000 10500 "-" "2" "onsolder,square,edge2"]
+	Pad[0 0 0 0 20000 1000 20500 "+" "1" "onsolder,square"]
+	Pad[29500 -5000 29500 5000 10000 1000 10500 "-" "2" "onsolder,square,edge2"]
 	ElementLine [-25000 24000 25000 24000 1000]
 	ElementLine [25000 24000 25000 -23900 1000]
 	ElementLine [25000 -15000 30200 -20200 1000]
@@ -838,14 +829,14 @@ Element["onsolder" "bhx1-1025-sm" "B1" "unknown" 35000 30800 -22200 22000 0 100 
 
 Element["" "hole-M2.5" "H2" "unknown" 7500 48500 -16900 -21000 0 100 ""]
 (
-	Pin[0 0 11000 2000 11000 9800 "pin1" "1" "usetherm,thermal(1S)"]
+	Pin[0 0 11000 2000 11000 9800 "1" "1" "usetherm,thermal(1S)"]
 	ElementArc [0 0 7000 7000 0 360 1000]
 
 	)
 
 Element["" "hole-M2.5" "H1" "unknown" 62500 48500 -16900 -21000 0 100 ""]
 (
-	Pin[0 0 11000 2000 11000 9800 "pin1" "1" "usetherm,thermal(1S)"]
+	Pin[0 0 11000 2000 11000 9800 "1" "1" "usetherm,thermal(1S)"]
 	ElementArc [0 0 7000 7000 0 360 1000]
 
 	)
@@ -900,7 +891,7 @@ Element["" "QFN20_4" "U1" "unknown" 49000 35300 -9358 -16308 0 100 ""]
 	Pad[-8307 0 -5866 0 1102 2000 1402 "18" "18" "square,octagon"]
 	Pad[-8307 1968 -5866 1968 1102 2000 1402 "19" "19" "square,octagon"]
 	Pad[-8307 3937 -5866 3937 1102 2000 1402 "20" "20" "square,octagon"]
-	Pad[0 0 0 0 10236 1000 10736 "21" "21" "square,octagon,edge2"]
+	Pad[0 0 0 0 10236 1000 10736 "GND Exposed" "21" "square,octagon,edge2"]
 	ElementLine [-9858 -9858 9858 -9858 1000]
 	ElementLine [-9858 -9858 -9858 9858 1000]
 	ElementLine [-9858 9858 9858 9858 1000]
@@ -924,6 +915,24 @@ Element["" "MS5611" "U2" "unknown" 51900 12200 -16961 -10811 0 100 ""]
 	ElementLine [-9843 -5906 -9843 5905 1000]
 	ElementLine [-9843 5905 9842 5905 1000]
 	ElementArc [8611 -7579 500 500 180 360 1000]
+
+	)
+
+Element["" "pico-ezmate-2" "J1" "unknown" 17100 28000 5951 -8869 0 100 ""]
+(
+	Pad[-492 -2362 492 -2362 2362 500 2562 "1" "1" "square,edge2"]
+	Pad[-492 2362 492 2362 2362 500 2562 "2" "2" "square,edge2"]
+	Pad[-14961 9252 -14567 9252 2756 500 2956 "GND" "GND" "square"]
+	Pad[-14961 -9252 -14567 -9252 2756 500 2956 "GND" "GND" "square"]
+	ElementLine [1000 -11000 1000 -3600 100]
+	ElementLine [1000 3600 1000 11000 100]
+	ElementLine [-17000 11000 1000 11000 100]
+	ElementLine [-17000 6000 -17000 11000 100]
+	ElementLine [-17000 6000 -15000 4000 100]
+	ElementLine [-15000 -4000 -15000 4000 100]
+	ElementLine [-15000 -4000 -17000 -6000 100]
+	ElementLine [-17000 -11000 -17000 -6000 100]
+	ElementLine [-17000 -11000 1000 -11000 100]
 
 	)
 Layer(1 "top")
@@ -976,17 +985,16 @@ Layer(1 "top")
 	Line[45063 28214 45063 26463 1000 2000 "clearline"]
 	Line[45063 26463 37000 18400 1000 2000 "clearline"]
 	Line[45063 42386 39786 42386 1000 2000 "clearline"]
-	Line[39786 42386 24000 26600 1000 2000 "clearline"]
-	Line[24000 26600 24000 20100 1000 2000 "clearline"]
-	Line[24000 20100 21900 18000 1000 2000 "clearline"]
-	Line[21900 18000 17657 18000 1000 2000 "clearline"]
-	Line[17657 18000 17618 18039 1000 2000 "clearline"]
 	Line[36548 28100 45063 28100 1000 2000 "clearline"]
 	Line[26500 15100 26500 23100 1000 2000 "clearline"]
 	Line[26500 23100 31500 28100 1000 2000 "clearline"]
 	Line[31500 28100 33400 28100 1000 2000 "clearline"]
-	Line[17600 27000 17600 22979 1000 2000 "clearline"]
-	Line[17600 22979 17618 22961 1000 2000 "clearline"]
+	Line[17100 30362 21138 30362 1000 2000 "clearline"]
+	Line[21138 30362 21200 30300 1000 2000 "clearline"]
+	Line[39814 42386 39786 42386 1000 2000 "clearline"]
+	Line[39786 42386 23000 25600 1000 2000 "clearline"]
+	Line[23000 25600 17138 25600 1000 2000 "clearline"]
+	Line[17138 25600 17100 25638 1000 2000 "clearline"]
 )
 Layer(2 "bottom")
 (

@@ -1,3 +1,2 @@
 ; empty the library path and populate it with only our own symbols
 (component-library "./symbols")
-(load (build-path geda-rc-path "gschem-colormap-lightbg"))
