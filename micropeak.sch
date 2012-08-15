@@ -219,38 +219,49 @@ T 52000 40100 9 10 1 0 0 0 1
 1
 T 50000 40400 9 10 1 0 0 0 1
 micropeak.sch
-C 53700 43700 1 0 0 hole_plated.sym
+C 53700 44400 1 0 0 hole_plated.sym
 {
-T 53800 45400 5 10 0 0 0 0 1
+T 53800 46100 5 10 0 0 0 0 1
 device=HOLE_PLATED
-T 53800 44200 5 10 1 1 0 0 1
+T 53800 44900 5 10 1 1 0 0 1
 refdes=H1
-T 53700 43700 5 10 0 0 0 0 1
+T 53700 44400 5 10 0 0 0 0 1
 footprint=hole-M2.5
-T 53700 43700 5 10 0 1 0 0 1
+T 53700 44400 5 10 0 1 0 0 1
 loadstatus=noload
 }
-C 53700 42900 1 0 0 hole_plated.sym
+C 53700 43600 1 0 0 hole_plated.sym
 {
-T 53800 44600 5 10 0 0 0 0 1
+T 53800 45300 5 10 0 0 0 0 1
 device=HOLE_PLATED
-T 53800 43400 5 10 1 1 0 0 1
+T 53800 44100 5 10 1 1 0 0 1
 refdes=H2
-T 53700 42900 5 10 0 0 0 0 1
+T 53700 43600 5 10 0 0 0 0 1
 footprint=hole-M2.5
-T 53700 42900 5 10 0 1 0 0 1
+T 53700 43600 5 10 0 1 0 0 1
 loadstatus=noload
 }
-C 54200 41900 1 0 0 gnd-1.sym
-N 54300 42200 54300 43900 4
-C 53700 42100 1 0 0 hole_plated.sym
+C 54200 41800 1 0 0 gnd-1.sym
+N 54300 42100 54300 44600 4
+C 53700 42800 1 0 0 hole_plated.sym
 {
-T 53800 43800 5 10 0 0 0 0 1
+T 53800 44500 5 10 0 0 0 0 1
 device=HOLE_PLATED
-T 53800 42600 5 10 1 1 0 0 1
+T 53800 43300 5 10 1 1 0 0 1
 refdes=H3
-T 53700 42100 5 10 0 0 0 0 1
+T 53700 42800 5 10 0 0 0 0 1
 footprint=hole-M2.5
-T 53700 42100 5 10 0 1 0 0 1
+T 53700 42800 5 10 0 1 0 0 1
+loadstatus=noload
+}
+C 53700 42000 1 0 0 hole_plated.sym
+{
+T 53800 43700 5 10 0 0 0 0 1
+device=HOLE_PLATED
+T 53800 42500 5 10 1 1 0 0 1
+refdes=H4
+T 53700 42000 5 10 0 0 0 0 1
+footprint=hole-M2.5
+T 53700 42000 5 10 0 1 0 0 1
 loadstatus=noload
 }
