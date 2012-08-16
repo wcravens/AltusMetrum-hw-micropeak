@@ -12,6 +12,7 @@ PinSpacing = 0.50 # e
 Overall = 4.25    # E
 GndSquare = 2.60  # D2 & E2
 CoreSquare = 2.60
+PinClearance = 2 * (PinSpacing - PinWidth)
 
 # ATMEL specifies 120-150 microns between pad and solder mask
 # AT88RF1354 Appplication note
@@ -40,8 +41,8 @@ print '   Pad[',\
  	mm2mils100(0), \
 	mm2mils100(0), \
 	mm2mils100(GndSquare), \
-	0, \
- 	0, \
+	mm2mils100(PinClearance), \
+	mm2mils100(PinResist), \
 	'"pin21" "21" "square,nopaste"]'
 
 # vias in the ground pad under the chip
@@ -58,7 +59,7 @@ print '   Pad[',\
 
 # break pad under chip into a grid to control the resist and paste masks
 
-blocks=3
+blocks=3;
 
 for viarow in range (-1, 2):
   for viacol in range (-1, 2):
@@ -103,7 +104,7 @@ for pin in range (1,6):
  	mm2mils100((-3 + pin) * PinSpacing), \
 	mm2mils100(-Overall/2 + PinHeight - PinWidth/2), \
 	mm2mils100(PinWidth), \
-	mm2mils100(PinSpacing - PinWidth), \
+	mm2mils100(PinClearance), \
 	mm2mils100(PinResist), \
 	'"pin%i"' % (16-pin), '"%i"' % (16-pin), '0x0000]'
 
@@ -113,7 +114,7 @@ for pin in range (1,6):
  	mm2mils100((-3 + pin) * PinSpacing), \
 	mm2mils100(+Overall/2 - PinWidth/2), \
 	mm2mils100(PinWidth), \
-	mm2mils100(PinSpacing - PinWidth), \
+	mm2mils100(PinClearance), \
 	mm2mils100(PinResist), \
 	'"pin%i"' % pin, '"%i"' % pin, '0x0000]'
       
@@ -123,7 +124,7 @@ for pin in range (1,6):
 	mm2mils100(Overall/2 - PinWidth/2), \
  	mm2mils100((-3 + pin) * PinSpacing), \
 	mm2mils100(PinWidth), \
-	mm2mils100(PinSpacing - PinWidth), \
+	mm2mils100(PinClearance), \
 	mm2mils100(PinResist), \
 	'"pin%i"' % (11-pin), '"%i"' % (11-pin), '0x0000]'
 
@@ -133,7 +134,7 @@ for pin in range (1,6):
 	mm2mils100(-Overall/2 + PinHeight - PinWidth/2), \
  	mm2mils100((-3 + pin) * PinSpacing), \
 	mm2mils100(PinWidth), \
-	mm2mils100(PinSpacing - PinWidth), \
+	mm2mils100(PinClearance), \
 	mm2mils100(PinResist), \
 	'"pin%i"' % (15+pin), '"%i"' % (15+pin), '0x0000]'
 
