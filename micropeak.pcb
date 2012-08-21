@@ -6,7 +6,7 @@ FileVersion[20070407]
 PCB["MicroPeak" 70000 56000]
 
 Grid[100.0 0 0 0]
-Cursor[0 9000 0.000000]
+Cursor[1800 11400 0.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[500 1000 500 500 1500 650]
@@ -1105,6 +1105,11 @@ NetList()
 		Connect("U1-15")
 		Connect("U2-1")
 	)
+	Net("\\_reset\\_" "(unknown)")
+	(
+		Connect("J1-4")
+		Connect("U1-1")
+	)
 	Net("clk" "(unknown)")
 	(
 		Connect("J1-2")
@@ -1145,11 +1150,6 @@ NetList()
 		Connect("J1-3")
 		Connect("U1-11")
 		Connect("U2-7")
-	)
-	Net("nRESET" "(unknown)")
-	(
-		Connect("J1-4")
-		Connect("U1-1")
 	)
 	Net("unnamed_net1" "(unknown)")
 	(
