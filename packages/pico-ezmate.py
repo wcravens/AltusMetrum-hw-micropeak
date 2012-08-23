@@ -19,7 +19,7 @@ OutlineX = 1.5
 OutlineYPad = - (0.38 / 2)
 OutlineYHold = OutlineYPad + 4.5
 
-NumPad=5
+NumPad=6
 
 print '# author: Keith Packard'
 print '# email: keithp@keithp.com'

@@ -247,32 +247,45 @@ footprint=hole-M2.5
 T 53700 42000 5 10 0 1 0 0 1
 loadstatus=noload
 }
-C 51100 42700 1 0 0 conn-5.sym
-{
-T 51455 44595 5 10 1 1 0 0 1
-refdes=J1
-T 51100 42700 5 10 0 0 0 0 1
-footprint=pico-ezmate-5
-}
 N 50500 44400 51100 44400 4
 {
 T 50500 44400 5 10 1 1 0 0 1
 netname=miso
 }
-N 50500 44000 51100 44000 4
-{
-T 50500 44000 5 10 1 1 0 0 1
-netname=clk
-}
 N 50500 43600 51100 43600 4
 {
 T 50500 43600 5 10 1 1 0 0 1
-netname=mosi
+netname=clk
 }
 N 50500 43200 51100 43200 4
 {
 T 50500 43200 5 10 1 1 0 0 1
-netname=\_reset\_
+netname=mosi
 }
 N 50500 42800 51100 42800 4
-C 50400 42500 1 0 0 gnd-1.sym
+{
+T 50500 42800 5 10 1 1 0 0 1
+netname=\_reset\_
+}
+N 50500 42400 51100 42400 4
+C 50400 42100 1 0 0 gnd-1.sym
+N 51100 44000 50500 44000 4
+C 50300 44000 1 0 0 3.3V-plus-1.sym
+C 52000 42100 1 0 0 gnd-1.sym
+C 51100 42300 1 0 0 pico-ezmate-6.sym
+{
+T 51455 44595 5 10 1 1 0 0 1
+refdes=J1
+T 51095 42275 5 10 0 1 0 0 1
+footprint=pico-ezmate-6
+T -5 -25 8 10 0 1 0 0 1
+vendor=digikey
+T -5 -25 8 10 0 1 0 0 1
+vendor_part_number=WM5408CT-ND
+T -5 -25 8 10 0 1 0 0 1
+loadstatus=smt
+T -5 -25 8 10 0 1 0 0 1
+device=CONNECTOR
+T -5 -25 8 10 0 1 0 0 1
+value=6-pin
+}
