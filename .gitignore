@@ -1,0 +1,17 @@
+*.gbr
+*.bak*
+*-
+*~
+*.zip
+*.xy
+*.cnc
+*.csv
+*.dk
+*.bom
+*.drc
+*.net
+*.ps
+*.pdf
+*.unsorted
+*.cmd
+partslist
