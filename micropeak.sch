@@ -271,21 +271,14 @@ N 50500 42400 51100 42400 4
 C 50400 42100 1 0 0 gnd-1.sym
 N 51100 44000 50500 44000 4
 C 50300 44000 1 0 0 3.3V-plus-1.sym
-C 52000 42100 1 0 0 gnd-1.sym
 C 51100 42300 1 0 0 pico-ezmate-6.sym
 {
 T 51455 44595 5 10 1 1 0 0 1
 refdes=J1
 T 51095 42275 5 10 0 1 0 0 1
 footprint=pico-ezmate-6
-T -5 -25 8 10 0 1 0 0 1
-vendor=digikey
-T -5 -25 8 10 0 1 0 0 1
-vendor_part_number=WM5408CT-ND
-T -5 -25 8 10 0 1 0 0 1
-loadstatus=smt
-T -5 -25 8 10 0 1 0 0 1
+T 51095 42275 5 10 0 1 0 0 1
 device=CONNECTOR
-T -5 -25 8 10 0 1 0 0 1
+T 51095 42275 5 10 0 1 0 0 1
 value=6-pin
 }
