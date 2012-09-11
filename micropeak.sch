@@ -7,11 +7,13 @@ footprint=MO-220
 T 46900 48100 5 10 1 1 0 0 1
 refdes=U1
 T 42400 48100 5 10 1 1 0 0 1
-device=ATtiny85
+device=IC
+T 42400 48100 5 10 1 1 0 0 1
+value=ATtiny85
 T 41995 44475 5 10 0 1 0 0 1
 vendor=digikey
 T 41995 44475 5 10 0 1 0 0 1
-vendor_part_number=ATTINY85-20SU-ND
+vendor_part_number=ATTINY85-20MU-ND
 T 41995 44475 5 10 0 1 0 0 1
 loadstatus=smt
 }
@@ -183,7 +185,7 @@ value=270
 T 47500 45400 5 10 0 0 0 0 1
 vendor=digikey
 T 47500 45400 5 10 0 0 0 0 1
-vendor_part_number=541-270LCT-ND
+vendor_part_number=RC0603JR-07270RL
 T 47500 45400 5 10 0 0 0 0 1
 loadstatus=smt
 }

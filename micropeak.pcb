@@ -907,7 +907,7 @@ Element["" "hole-M2.5" "H4" "unknown" 62500 7500 -3100 -3100 0 100 ""]
 
 	)
 
-Element["" "MO-220" "U1" "unknown" 53800 28500 5900 -22800 0 100 ""]
+Element["" "MO-220" "U1" "ATtiny85" 53800 28500 5900 -22800 0 100 ""]
 (
 	Pad[0 0 0 0 10236 2126 1457 "pin21" "21" "square,nopaste"]
 	Pad[-3411 -3411 -3411 -3411 3412 0 0 "pin21" "21" "square,nopaste"]
@@ -948,7 +948,7 @@ Element["" "MO-220" "U1" "unknown" 53800 28500 5900 -22800 0 100 ""]
 
 	)
 
-Element["" "pico-ezmate-6" "J1" "6-pin" 35000 53100 -30900 1100 0 100 ""]
+Element["" "pico-ezmate-6" "J1" "6-pin" 35000 53100 -309000 1100 0 100 ""]
 (
 	Pad[-11810 -491 -11810 492 2362 2362 3543 "pin1" "1" "square,nopaste"]
 	Pad[-7086 -491 -7086 492 2362 2362 3543 "pin2" "2" "square,nopaste"]
@@ -959,7 +959,7 @@ Element["" "pico-ezmate-6" "J1" "6-pin" 35000 53100 -30900 1100 0 100 ""]
 
 	)
 
-Element["onsolder" "bhx1-1025-sm" "B1" "unknown" 35000 30800 -22200 22000 0 100 "auto"]
+Element["onsolder" "bhx1-1025-sm" "B1" "unknown" 35000 30800 -222000 22000 0 100 "auto"]
 (
 	Pad[-29500 -5000 -29500 5000 10000 1000 10500 "-" "2" "onsolder,square,edge2"]
 	Pad[0 0 0 0 20000 1000 20500 "+" "1" "onsolder,square"]
