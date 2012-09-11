@@ -39,15 +39,18 @@ push:
 $(PROJECT).xy:	$(PROJECT).pcb
 	pcb -x bom $(PROJECT).pcb
 
-$(PROJECT).bottom.gbr:	$(PROJECT).pcb
+$(PROJECT).gerb: $(PROJECT).pcb
+	rm -f *.gbr *.cnc
 	pcb -x gerber $(PROJECT).pcb
+	touch $@
 
-zip:	$(PROJECT).bottom.gbr $(PROJECT).bottommask.gbr $(PROJECT).fab.gbr $(PROJECT).top.gbr $(PROJECT).topmask.gbr $(PROJECT).toppaste.gbr $(PROJECT).topsilk.gbr $(PROJECT).plated-drill.cnc $(PROJECT).xy  Makefile # $(PROJECT).xls
+zip: $(PROJECT).zip
+
+$(PROJECT).zip: $(PROJECT).gerb $(PROJECT).xy
 	rm -f $(PROJECT).zip
-	zip $(PROJECT).zip $(PROJECT).*.gbr $(PROJECT).*.cnc $(PROJECT).xy # $(PROJECT).xls
+	zip $(PROJECT).zip *.gbr *.cnc *.xy
 
 clean:
-	rm -f *.bom *.drc *.log *~ $(PROJECT).ps *.gbr *.cnc *bak* *- *.zip 
+	rm -f *.bom *.drc *.log *~ $(PROJECT).ps *.gbr $(PROJECT).gerb *.cnc *bak* *- *.zip 
 	rm -f *.net *.xy *.cmd *.png partslist partslist.csv
 	rm -f *.partslist *.new.pcb *.unsorted $(PROJECT).xls
-
