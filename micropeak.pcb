@@ -6,11 +6,11 @@ FileVersion[20091103]
 PCB["MicroPeak" 700.00mil 560.00mil]
 
 Grid[100.000000 0.0000 0.0000 0]
-Cursor[4.00mil 211.00mil 0.000000]
+Cursor[52.00mil 18.00mil 0.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[5.00mil 10.00mil 5.00mil 5.00mil 15.00mil 6.50mil]
-Flags("showdrc,nameonpcb,snappin")
+Flags("showdrc,nameonpcb,clearnew,orthomove")
 Groups("1,c:2,s:3")
 Styles["Signal,10.00mil,36.00mil,20.00mil,10.00mil:Power,25.00mil,60.00mil,35.00mil,10.00mil:Fat,40.00mil,60.00mil,35.00mil,10.00mil:Skinny,6.00mil,24.02mil,11.81mil,6.00mil"]
 
@@ -822,7 +822,7 @@ Via[186.00mil 146.00mil 36.00mil 20.00mil 0.0000 20.00mil "" ""]
 Via[278.00mil 184.00mil 36.00mil 20.00mil 0.0000 20.00mil "" "thermal(0S,1S)"]
 Via[468.00mil 497.00mil 36.00mil 20.00mil 0.0000 20.00mil "" "thermal(0S,1S)"]
 Via[478.00mil 65.00mil 36.00mil 20.00mil 0.0000 20.00mil "" "thermal(0S,1S)"]
-Via[567.00mil 368.00mil 36.00mil 20.00mil 0.0000 20.00mil "" ""]
+Via[567.00mil 368.00mil 36.00mil 20.00mil 0.0000 20.00mil "" "thermal(1S)"]
 Via[279.00mil 496.00mil 36.00mil 20.00mil 0.0000 20.00mil "" ""]
 Via[356.00mil 438.00mil 36.00mil 20.00mil 0.0000 20.00mil "" ""]
 Via[230.00mil 433.00mil 36.00mil 20.00mil 0.0000 20.00mil "" "thermal(0S,1S)"]
@@ -1123,11 +1123,8 @@ Layer(2 "bottom")
 	Line[55.00mil 95.00mil 75.00mil 75.00mil 25.00mil 20.00mil ""]
 	Line[645.00mil 465.00mil 625.00mil 485.00mil 25.00mil 20.00mil ""]
 	Line[645.00mil 95.00mil 625.00mil 75.00mil 25.00mil 20.00mil ""]
-	Line[409.00mil 368.00mil 349.00mil 308.00mil 10.00mil 20.00mil ""]
 	Line[645.00mil 95.00mil 645.00mil 465.00mil 25.00mil 20.00mil ""]
-	Line[567.00mil 368.00mil 409.00mil 368.00mil 10.00mil 20.00mil "clearline"]
 	Line[55.00mil 308.00mil 128.00mil 308.00mil 25.00mil 20.00mil ""]
-	Line[645.00mil 308.00mil 577.00mil 308.00mil 25.00mil 20.00mil ""]
 	Line[230.00mil 308.00mil 460.00mil 308.00mil 25.00mil 20.00mil ""]
 	Line[350.00mil 308.00mil 350.00mil 194.00mil 25.00mil 20.00mil ""]
 	Line[279.00mil 496.00mil 279.00mil 542.00mil 10.00mil 20.00mil ""]
@@ -1150,14 +1147,6 @@ Layer(2 "bottom")
 	)
 	Polygon("clearpoly")
 	(
-		[695.00mil 5.00mil] [506.00mil 5.00mil] [506.00mil 555.00mil] [695.00mil 555.00mil] 
-	)
-	Polygon("clearpoly")
-	(
-		[506.00mil 555.00mil] [695.00mil 555.00mil] [695.00mil 376.00mil] [506.00mil 376.00mil] 
-	)
-	Polygon("clearpoly")
-	(
 		[151.00mil 555.00mil] [527.00mil 555.00mil] [527.00mil 530.00mil] [151.00mil 530.00mil] 
 	)
 	Polygon("clearpoly")
@@ -1167,6 +1156,31 @@ Layer(2 "bottom")
 	Polygon("clearpoly")
 	(
 		[494.00mil 427.00mil] [421.00mil 427.00mil] [421.00mil 131.00mil] [494.00mil 131.00mil] 
+	)
+	Polygon("clearpoly")
+	(
+		[392.00mil 373.00mil] [599.00mil 373.00mil] [599.00mil 198.00mil] [392.00mil 198.00mil] 
+	)
+	Polygon("clearpoly")
+	(
+		[506.00mil 397.00mil] [695.00mil 397.00mil] [695.00mil 555.00mil] [506.00mil 555.00mil] 
+	)
+	Polygon("clearpoly")
+	(
+		[506.00mil 383.00mil] [539.00mil 383.00mil] [539.00mil 417.00mil] [506.00mil 417.00mil] 
+	)
+	Polygon("clearpoly")
+	(
+		[327.00mil 325.00mil] [480.00mil 325.00mil] [480.00mil 445.00mil] [327.00mil 445.00mil] 
+	)
+	Polygon("clearpoly")
+	(
+		[695.00mil 5.00mil] [506.00mil 5.00mil] [506.00mil 187.00mil] [695.00mil 187.00mil] 
+	)
+	Polygon("clearpoly")
+	(
+		[528.00mil 383.00mil] [539.00mil 383.00mil] [553.00mil 397.00mil] [553.00mil 412.00mil] [526.00mil 412.00mil] 
+		[526.00mil 383.00mil] 
 	)
 )
 Layer(3 "outline")
@@ -1183,17 +1197,17 @@ Layer(4 "silk")
 Layer(5 "silk")
 (
 	Text[188.00mil 434.00mil 0 90 "Keith Packard" "clearline"]
-	Text[117.00mil 361.00mil 0 90 "MicroPeak ` 2012" "clearline"]
+	Text[117.00mil 372.00mil 0 90 "MicroPeak ` 2012" "clearline"]
 	Polygon("")
 	(
-		[221.48mil 207.40mil] [249.58mil 169.92mil] [296.58mil 321.06mil] [328.95mil 351.23mil] [270.18mil 351.23mil] 
-		[239.66mil 321.62mil] [239.66mil 204.95mil] [221.48mil 217.00mil] [203.30mil 204.95mil] [203.30mil 321.62mil] 
-		[172.77mil 351.23mil] [114.00mil 351.23mil] [146.38mil 321.06mil] [4.9116mm 169.92mil] [221.48mil 207.40mil] 
+		[221.48mil 212.00mil] [249.58mil 174.52mil] [296.58mil 325.66mil] [328.95mil 355.83mil] [270.18mil 355.83mil] 
+		[239.66mil 326.22mil] [239.66mil 209.55mil] [221.48mil 221.60mil] [203.30mil 209.55mil] [203.30mil 326.22mil] 
+		[172.77mil 355.83mil] [114.00mil 355.83mil] [146.38mil 325.66mil] [4.9116mm 174.52mil] [221.48mil 212.00mil] 
 	)
 	Polygon("")
 	(
-		[221.48mil 79.00mil] [246.78mil 160.36mil] [6.0866mm 168.95mil] [221.48mil 130.80mil] [203.33mil 168.95mil] 
-		[196.17mil 160.36mil] [221.48mil 79.00mil] 
+		[221.48mil 83.00mil] [246.78mil 164.36mil] [6.0866mm 172.95mil] [221.48mil 134.80mil] [203.33mil 172.95mil] 
+		[196.17mil 164.36mil] [221.48mil 83.00mil] 
 	)
 )
 NetList()
