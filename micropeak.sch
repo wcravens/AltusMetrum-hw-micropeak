@@ -165,7 +165,7 @@ footprint=0603diode
 T 48400 45000 5 10 0 1 90 0 1
 vendor=digikey
 T 48400 45000 5 10 0 1 90 0 1
-vendor_part_number=754-1434-1-ND
+vendor_part_number=160-1837-1-ND
 T 48400 45000 5 10 0 1 90 0 1
 loadstatus=smt
 }
@@ -178,11 +178,11 @@ refdes=R1
 T 47500 45400 5 10 0 0 0 0 1
 footprint=0402
 T 48000 45700 5 10 1 1 0 0 1
-value=270
+value=220
 T 47500 45400 5 10 0 0 0 0 1
 vendor=digikey
 T 47500 45400 5 10 0 0 0 0 1
-vendor_part_number=RC0603JR-07270RL
+vendor_part_number=RC0603JR-07220RL
 T 47500 45400 5 10 0 0 0 0 1
 loadstatus=smt
 }
@@ -280,82 +280,13 @@ value=6-pin
 }
 C 54100 44600 1 0 0 3.3V-plus-1.sym
 N 48400 45500 48400 45100 4
-C 41500 40500 1 0 0 at24c.sym
-{
-T 41495 40475 5 10 0 1 0 0 1
-footprint=udfn-8
-T 43900 43200 5 10 1 1 0 0 1
-refdes=U3
-T 41500 40500 5 10 0 1 0 0 1
-vendor=digikey
-T 41500 40500 5 10 0 1 0 0 1
-vendor_part_number=AT24C512C-MAHM-TCT-ND
-T 41500 40500 5 10 0 1 0 0 1
-device=IC
-T 41500 40500 5 10 0 1 0 0 1
-loadstatus=smt
-T 41500 40500 5 10 0 1 0 0 1
-value=at24c512c
-}
-C 42900 40200 1 0 0 gnd-1.sym
-C 42800 43500 1 0 0 3.3V-plus-1.sym
-N 41500 42500 41500 41500 4
-C 41400 41200 1 0 0 gnd-1.sym
-C 44400 42200 1 0 0 gnd-1.sym
-N 44500 42000 45500 42000 4
-{
-T 45100 42100 5 10 1 1 0 0 1
-netname=clk
-}
-N 44500 41500 46500 41500 4
-{
-T 46300 41600 5 10 1 1 0 0 1
-netname=miso
-}
 C 49200 44800 1 0 0 gnd-1.sym
-N 42500 40500 43500 40500 4
-C 44900 42900 1 270 0 resistor-1.sym
-{
-T 45300 42600 5 10 0 0 270 0 1
-device=RESISTOR
-T 45100 42400 5 10 1 1 0 0 1
-refdes=R2
-T 44600 42400 5 10 1 1 0 0 1
-value=47k
-T 44900 42900 5 10 0 1 0 0 1
-footprint=0402
-T 44900 42900 5 10 0 1 0 0 1
-loadstatus=smt
-T 44900 42900 5 10 0 1 0 0 1
-vendor=digikey
-T 44900 42900 5 10 0 1 0 0 1
-vendor_part_number=311-47KJRCT-ND
-}
-C 45900 42400 1 270 0 resistor-1.sym
-{
-T 46300 42100 5 10 0 0 270 0 1
-device=RESISTOR
-T 46100 41900 5 10 1 1 0 0 1
-refdes=R3
-T 45600 41900 5 10 1 1 0 0 1
-value=47k
-T 45900 42400 5 10 0 1 0 0 1
-footprint=0402
-T 45900 42400 5 10 0 1 0 0 1
-loadstatus=smt
-T 45900 42400 5 10 0 1 0 0 1
-vendor=digikey
-T 45900 42400 5 10 0 1 0 0 1
-vendor_part_number=311-47KJRCT-ND
-}
-C 44800 42900 1 0 0 3.3V-plus-1.sym
-C 45800 42400 1 0 0 3.3V-plus-1.sym
 C 49100 45600 1 0 0 resistor-1.sym
 {
 T 49400 46000 5 10 0 0 0 0 1
 device=RESISTOR
 T 49200 45850 5 10 1 1 0 0 1
-refdes=R4
+refdes=R2
 T 49600 45850 5 10 1 1 0 0 1
 value=4.7k
 T 49100 45600 5 10 0 1 0 0 1
