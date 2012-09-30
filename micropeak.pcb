@@ -6,7 +6,7 @@ FileVersion[20091103]
 PCB["MicroPeak" 700.00mil 560.00mil]
 
 Grid[100.000000 0.0000 0.0000 0]
-Cursor[153.00mil 0.0000 0.000000]
+Cursor[0.0000 0.0000 0.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[5.00mil 10.00mil 5.00mil 5.00mil 15.00mil 6.50mil]
@@ -848,7 +848,7 @@ Element["" "hole-M2.5" "H1" "unknown" 625.00mil 485.00mil -25.00mil -32.00mil 0 
 
 	)
 
-Element["" "0402" "R1" "270" 302.00mil 270.00mil -252.00mil 182.00mil 0 100 ""]
+Element["" "0402" "R1" "220" 306.00mil 270.00mil -252.00mil 182.00mil 0 100 ""]
 (
 	Pad[-3.93mil -15.74mil 3.93mil -15.74mil 19.68mil 20.00mil 25.68mil "1" "1" "square"]
 	Pad[-3.93mil 15.74mil 3.93mil 15.74mil 19.68mil 20.00mil 25.68mil "2" "2" "square"]
