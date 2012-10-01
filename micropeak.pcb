@@ -10,7 +10,7 @@ Cursor[0.0000 0.0000 0.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[5.00mil 10.00mil 5.00mil 5.00mil 15.00mil 6.50mil]
-Flags("showdrc,nameonpcb,clearnew")
+Flags("showdrc,nameonpcb,clearnew,snappin,orthomove")
 Groups("1,c:2,s:3")
 Styles["Signal,10.00mil,36.00mil,20.00mil,10.00mil:Power,25.00mil,60.00mil,35.00mil,10.00mil:Fat,40.00mil,60.00mil,35.00mil,10.00mil:Skinny,6.00mil,24.02mil,11.81mil,6.00mil"]
 
@@ -848,7 +848,7 @@ Element["" "hole-M2.5" "H1" "unknown" 625.00mil 485.00mil -25.00mil -32.00mil 0 
 
 	)
 
-Element["" "0402" "R1" "220" 306.00mil 270.00mil -252.00mil 182.00mil 0 100 ""]
+Element["" "0402" "R1" "220" 306.00mil 285.00mil -252.00mil 182.00mil 0 100 ""]
 (
 	Pad[-3.93mil -15.74mil 3.93mil -15.74mil 19.68mil 20.00mil 25.68mil "1" "1" "square"]
 	Pad[-3.93mil 15.74mil 3.93mil 15.74mil 19.68mil 20.00mil 25.68mil "2" "2" "square"]
@@ -1044,15 +1044,10 @@ Layer(1 "top")
 	Line[6.5692mm 3.3876mm 231.00mil 161.00mil 10.00mil 20.00mil "clearline"]
 	Line[13.2890mm 367.00mil 13.2890mm 11.2982mm 10.00mil 20.00mil ""]
 	Line[231.00mil 161.00mil 231.00mil 246.00mil 10.00mil 20.00mil "clearline"]
-	Line[239.00mil 254.00mil 231.00mil 246.00mil 10.00mil 20.00mil "clearline"]
 	Line[350.00mil 254.41mil 350.00mil 4.2376mm 10.00mil 20.00mil ""]
 	Line[278.00mil 184.00mil 278.00mil 185.00mil 10.00mil 20.00mil ""]
 	Line[278.00mil 185.00mil 292.00mil 199.00mil 10.00mil 20.00mil ""]
 	Line[292.00mil 199.00mil 350.00mil 199.00mil 10.00mil 20.00mil ""]
-	Line[238.50mil 253.50mil 7.6515mm 253.50mil 10.00mil 20.00mil "clearline"]
-	Line[7.6515mm 253.50mil 302.00mil 6.4582mm 10.00mil 20.00mil "clearline"]
-	Line[302.00mil 7.2578mm 330.15mil 7.2578mm 10.00mil 20.00mil "clearline"]
-	Line[330.15mil 7.2578mm 350.00mil 305.59mil 10.00mil 20.00mil "clearline"]
 	Line[604.00mil 54.00mil 625.00mil 75.00mil 10.00mil 20.00mil ""]
 	Line[484.26mil 29.00mil 460.00mil 29.00mil 10.00mil 20.00mil ""]
 	Line[460.00mil 29.00mil 456.00mil 25.00mil 10.00mil 20.00mil ""]
@@ -1096,6 +1091,10 @@ Layer(1 "top")
 	Line[441.69mil 113.69mil 468.00mil 140.00mil 10.00mil 20.00mil "clearline"]
 	Line[432.00mil 161.00mil 432.00mil 3.6206mm 10.00mil 20.00mil "clearline"]
 	Line[432.00mil 3.6206mm 10.7398mm 3.3876mm 10.00mil 20.00mil "clearline"]
+	Line[350.00mil 305.59mil 310.85mil 305.59mil 10.00mil 20.00mil "clearline"]
+	Line[310.85mil 305.59mil 306.00mil 7.6388mm 10.00mil 20.00mil "clearline"]
+	Line[306.00mil 6.8392mm 6.4582mm 6.8392mm 10.00mil 20.00mil "clearline"]
+	Line[6.4582mm 6.8392mm 231.00mil 246.00mil 10.00mil 20.00mil "clearline"]
 	Polygon("clearpoly")
 	(
 		[695.00mil 556.00mil] [506.00mil 556.00mil] [506.00mil 263.00mil] [695.00mil 263.00mil] 
@@ -1215,14 +1214,14 @@ Layer(5 "silk")
 	Text[117.00mil 372.00mil 0 90 "MicroPeak ` 2012" "clearline"]
 	Polygon("")
 	(
-		[220.00mil 224.00mil] [248.10mil 186.52mil] [295.10mil 337.66mil] [327.47mil 367.83mil] [268.70mil 367.83mil] 
-		[238.18mil 338.22mil] [238.18mil 221.55mil] [220.00mil 233.60mil] [201.82mil 221.55mil] [201.82mil 338.22mil] 
-		[171.29mil 367.83mil] [112.52mil 367.83mil] [144.90mil 337.66mil] [191.89mil 186.52mil] [220.00mil 224.00mil] 
+		[178.00mil 217.00mil] [206.10mil 179.52mil] [253.10mil 330.66mil] [285.47mil 360.83mil] [226.70mil 360.83mil] 
+		[196.18mil 331.22mil] [196.18mil 214.55mil] [178.00mil 226.60mil] [159.82mil 214.55mil] [159.82mil 331.22mil] 
+		[129.29mil 360.83mil] [70.52mil 360.83mil] [102.90mil 330.66mil] [149.89mil 179.52mil] [178.00mil 217.00mil] 
 	)
 	Polygon("")
 	(
-		[220.00mil 98.00mil] [245.30mil 179.36mil] [238.15mil 187.95mil] [220.00mil 149.80mil] [201.85mil 187.95mil] 
-		[194.69mil 179.36mil] [220.00mil 98.00mil] 
+		[178.00mil 91.00mil] [203.30mil 172.36mil] [196.15mil 180.95mil] [178.00mil 142.80mil] [159.85mil 180.95mil] 
+		[152.69mil 172.36mil] [178.00mil 91.00mil] 
 	)
 )
 NetList()
