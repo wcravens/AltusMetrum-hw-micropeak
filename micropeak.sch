@@ -141,13 +141,13 @@ refdes=D1
 T 48500 45600 5 10 0 0 0 0 1
 device=LED
 T 49300 45300 5 10 1 1 180 0 1
-value=blue
+value=orange
 T 48400 45000 5 10 0 1 90 0 1
-footprint=0603diode
+footprint=topled
 T 48400 45000 5 10 0 1 90 0 1
 vendor=digikey
 T 48400 45000 5 10 0 1 90 0 1
-vendor_part_number=160-1837-1-ND
+vendor_part_number=475-1178-1-ND
 T 48400 45000 5 10 0 1 90 0 1
 loadstatus=smt
 }
