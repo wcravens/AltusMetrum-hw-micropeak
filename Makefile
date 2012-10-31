@@ -11,12 +11,14 @@ partslist:	$(PROJECT).sch Makefile
 	(head -n1 $(PROJECT)-bom.unsorted && tail -n+2 $(PROJECT)-bom.unsorted | sort) | nickle ./retab > partslist
 	rm -f $(PROJECT)-bom.unsorted
 
-partslist.csv:	$(PROJECT).sch Makefile gnet-partslist-keithp.scm
-	gnetlist -l gnet-partslist-keithp.scm -g partslist-keithp -o $(PROJECT)-list.unsorted $(PROJECT).sch
-	nickle ./retab < $(PROJECT)-list.unsorted > $@
+partslist.csv:	$(PROJECT).sch Makefile gnet-partslist-csv.scm
+	gnetlist -l gnet-partslist-csv.scm -g partslist-csv -o $@ $(PROJECT).sch
 
 partslist.dk: 	$(PROJECT).sch Makefile gnet-partslist-bom.scm
 	gnetlist -m ./gnet-partslist-bom.scm -g partslist-bom -Ovendor=digikey -o $@ $(PROJECT).sch
+
+partslist.pdf: partslist.csv smt-labels.glabels
+	glabels-3-batch smt-labels.glabels -i partslist.csv -o partslist.ps && ps2pdf partslist.ps
 
 pcb:	$(PROJECT).sch project Makefile
 	gsch2pcb project
