@@ -1,0 +1,130 @@
+		      Building MicroPeak Boards
+			    Keith Packard
+			      2013-01-11
+
+Here's the process I'm using to build MicroPeak boards. I build 15
+boards at a time.
+
+1. Apply paste to the boards.
+
+	1.1 Check the stencil alignment with a board. Somehow, it always
+	    moves. Adjust and reaffix as necessary. The stencil is hinged on
+	    the side of the board containing the ATtiny85 so that the tiny
+	    ATtiny85 pads are the most carefully aligned.
+
+	1.2 Load a board.
+
+	1.3 Apply a bead of paste, on the far side of the ATtiny85 CPU. Spread
+	    paste with the blade nearly parallel to the board. Then scrape
+	    clean with the blade perpendicular to the board.
+
+	1.4 Clean the stencil every few boards to keep it from sticking to the
+	    boards
+
+2. Load boards
+
+	2.1 Prep parts for five boards. I group them as they'll be installed
+	    on the board. There are few enough that it's easy to tell where
+	    every part goes.
+
+	2.2 Load parts on each board. I do them in this order:
+
+		1. 100k reset capacitor
+		2. 470 LED current limiting capacitor
+		3. Power switch
+		4. CPU
+		5. CPU bypass cap
+		6. LED
+		7. baro bypass cap
+		8. baro sensor
+		9. 4.7k SPI resistor
+
+2.3 After five boards are loaded, prep parts for the next five.
+
+3. Reflow boards
+
+	3.1 Group boards in a 3x5 array in the middle of the griddle
+
+	3.2 Preheat to 100C.
+
+	3.3 Turn off griddle power. Let it sit for 1 minute
+
+	3.4 Turn power back on and wait for all parts to reflow
+
+	3.5 Let it sit for 10 seconds after the last part reflows
+
+	3.6 Turn off power
+
+	3.7 Let parts cool on the griddle to below 100C
+
+4. Flash and self-test
+
+	4.1 Connect pogo-pin fixture to power supply and AVR programmer
+
+	4.2 Turn on power supply
+
+	4.3 Insert board, run 'make load' to flash. Note that a previously
+	    flashed board will need 'make load-slow' to handle the 250kHz
+	    clock speed.
+
+	4.4 Wait for the flashing to complete. Check for a single orange LED
+	    flash which signals self test complete.
+
+5. Attach battery holders
+
+	5.1 Flow a small amount of solder onto the center conductor pad so
+	    that it is raised high enough to hit the battery terminal.
+
+	5.2 Take the metal battery holder cage, align to the circuit board and
+	    clamp the ATtiny85 end in a vise whose jaws are horizontal. This
+	    end has enough board surface on the parts side to allow clamping,
+	    especially if you align the bypass cap inside a gap in the vise
+	    jaws.
+
+	5.3 Press down on the battery holder so that the exposed terminal
+	    makes firm contact with the PCB pad. Solder in place.
+
+	5.4 Remove from vise.
+
+	5.5 With the vise jaws vertical again, place the board in the end of
+	    the vise with the remaining battery holder terminal exposed.
+
+	5.6 Solder in place.
+
+	5.7 Load battery into plastic tray, install in battery holder
+
+6. System test
+
+	6.1 Power the board on. Make sure the LED blinks once
+
+	6.2 Insert into barometric testing chamber (35cc syringe)
+
+	6.3 Move plunger to 10cc mark. Insert plug
+
+	6.4 Wait for the altimeter to be ready for boost detect
+
+	6.5 Increase volume from 10cc to 20cc (halving pressure)
+
+	6.6 Make sure altimeter registers boost detect by blinking
+	    quickly.
+
+	6.7 Wait 2 seconds, then decrease volume back to 10cc
+
+	6.8 Wait for altimeter to indicate landing by blinking out
+	    maximum height
+
+	6.9 Verify that maximum height is approximately 5500m
+
+	6.10 Turn off power
+
+7. Package
+
+	7.1 Cut 1cm x 4cm piece of closed-cell foam
+
+	7.2 Insert foam into plastic bag
+
+	7.3 Push foam to bottom of bag with product card
+
+	7.4 Drop board into bag, move alongside foam
+
+	7.5 Push air out of bag and seal
