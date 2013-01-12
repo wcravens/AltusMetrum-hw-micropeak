@@ -160,11 +160,11 @@ refdes=R1
 T 47500 45400 5 10 0 0 0 0 1
 footprint=0402
 T 48000 45700 5 10 1 1 0 0 1
-value=220
+value=470
 T 47500 45400 5 10 0 0 0 0 1
 vendor=digikey
 T 47500 45400 5 10 0 0 0 0 1
-vendor_part_number=RC0603JR-07220RL
+vendor_part_number=311-470JRCT-ND
 T 47500 45400 5 10 0 0 0 0 1
 loadstatus=smt
 }
