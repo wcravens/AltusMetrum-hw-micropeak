@@ -5,7 +5,7 @@ NICKLE=$(AM)/nickle
 RETAB=nickle $(NICKLE)/retab
 
 # intentionally want to rebuild drc and bom on every invocation
-all:	drc pcb partslist partslist.csv partslist.dk muffin-5267.pdf
+all:	drc pcb partslist partslist.csv partslist.dk muffin-5267.pdf stencil
 
 drc: $(PROJECT).sch
 	gnetlist -L $(SCHEME) -g drc2 $(PROJECT).sch -o $(PROJECT).drc
@@ -59,7 +59,11 @@ $(PROJECT).zip: $(PROJECT).gerb $(PROJECT).xy
 	rm -f $(PROJECT).zip
 	zip $(PROJECT).zip *.gbr *.cnc *.xy
 
+stencil:	$(PROJECT).gerb
+	zip $(PROJECT)-stencil.zip $(PROJECT).toppaste.gbr $(PROJECT).outline.gbr
+
 clean:
 	rm -f *.bom *.drc *.log *~ $(PROJECT).ps *.gbr $(PROJECT).gerb *.cnc *bak* *- *.zip 
 	rm -f *.net *.xy *.cmd *.png partslist partslist.csv partslist.dk partslist.mouser muffin-5267.pdf
 	rm -f *.partslist *.new.pcb *.unsorted $(PROJECT).xls
+	rm -f $(PROJECT)-stencil.zip
