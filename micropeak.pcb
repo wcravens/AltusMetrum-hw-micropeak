@@ -837,7 +837,7 @@ Element["" "hole-M2.5" "H1" "unknown" 625.00mil 485.00mil -25.00mil -32.00mil 0 
 
 	)
 
-Element["" "0402" "R1" "220" 415.00mil 242.00mil -192.00mil -356.00mil 3 100 ""]
+Element["" "0402" "R1" "470" 415.00mil 242.00mil -192.00mil -356.00mil 3 100 ""]
 (
 	Pad[15.74mil -3.93mil 15.74mil 3.93mil 19.68mil 20.00mil 25.68mil "1" "1" "square"]
 	Pad[-15.74mil -3.93mil -15.74mil 3.93mil 19.68mil 20.00mil 25.68mil "2" "2" "square"]
