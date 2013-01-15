@@ -1,24 +1,31 @@
 PROJECT=micropeak
+AM=../altusmetrum
+SCHEME=$(AM)/scheme
+NICKLE=$(AM)/nickle
+RETAB=nickle $(NICKLE)/retab
 
 # intentionally want to rebuild drc and bom on every invocation
-all:	drc pcb partslist partslist.csv partslist.dk
+all:	drc pcb partslist partslist.csv partslist.dk muffin-5267.pdf
 
-drc:	$(PROJECT).sch Makefile
-	-gnetlist -g drc2 $(PROJECT).sch -o $(PROJECT).drc
+drc: $(PROJECT).sch
+	gnetlist -L $(SCHEME) -g drc2 $(PROJECT).sch -o $(PROJECT).drc
 
-partslist:	$(PROJECT).sch Makefile
-	gnetlist -g bom -o $(PROJECT)-bom.unsorted $(PROJECT).sch
-	(head -n1 $(PROJECT)-bom.unsorted && tail -n+2 $(PROJECT)-bom.unsorted | sort) | nickle ./retab > partslist
-	rm -f $(PROJECT)-bom.unsorted
+partslist: $(PROJECT).sch
+	gnetlist -L $(SCHEME) -g bom -o $(PROJECT).tabtmp $(PROJECT).sch
+	(head -n1 $(PROJECT).tabtmp; tail -n+2 $(PROJECT).tabtmp | sort) | $(RETAB) > $@ && rm -f $(PROJECT).tabtmp
 
-partslist.csv:	$(PROJECT).sch Makefile gnet-partslist-csv.scm
-	gnetlist -l gnet-partslist-csv.scm -g partslist-csv -o $@ $(PROJECT).sch
+partslist.csv: $(PROJECT).sch Makefile
+	gnetlist -L $(SCHEME) -g partslistgag -o $(PROJECT).csvtmp $(PROJECT).sch
+	(head -n1 $(PROJECT).csvtmp; tail -n+2 $(PROJECT).csvtmp | sort -t \, -k 8) > $@ && rm -f $(PROJECT).csvtmp
 
-partslist.dk: 	$(PROJECT).sch Makefile gnet-partslist-bom.scm
-	gnetlist -m ./gnet-partslist-bom.scm -g partslist-bom -Ovendor=digikey -o $@ $(PROJECT).sch
+partslist.dk: $(PROJECT).sch Makefile $(SCHEME)/gnet-partslist-bom.scm
+	gnetlist -L $(SCHEME) -g partslist-bom -Ovendor=digikey -o $@ $(PROJECT).sch
 
-partslist.pdf: partslist.csv smt-labels.glabels
-	glabels-3-batch smt-labels.glabels -i partslist.csv -o partslist.ps && ps2pdf partslist.ps
+partslist.mouser: $(PROJECT).sch Makefile $(SCHEME)/gnet-partslist-bom.scm
+	gnetlist -L $(SCHEME) -g partslist-bom -Ovendor=mouser -o $@ $(PROJECT).sch
+
+muffin-5267.pdf: partslist.csv $(AM)/glabels/muffin-5267.glabels
+	glabels-3-batch $(AM)/glabels/muffin-5267.glabels -i partslist.csv -o muffin-5267.ps && ps2pdf muffin-5267.ps && rm muffin-5267.ps
 
 pcb:	$(PROJECT).sch project Makefile
 	gsch2pcb project
@@ -54,5 +61,5 @@ $(PROJECT).zip: $(PROJECT).gerb $(PROJECT).xy
 
 clean:
 	rm -f *.bom *.drc *.log *~ $(PROJECT).ps *.gbr $(PROJECT).gerb *.cnc *bak* *- *.zip 
-	rm -f *.net *.xy *.cmd *.png partslist partslist.csv
+	rm -f *.net *.xy *.cmd *.png partslist partslist.csv partslist.dk partslist.mouser muffin-5267.pdf
 	rm -f *.partslist *.new.pcb *.unsorted $(PROJECT).xls
