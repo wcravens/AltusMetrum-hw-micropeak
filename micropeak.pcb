@@ -858,7 +858,7 @@ Element["" "0402" "C1" "0.1uF" 664.00mil 349.00mil -63.00mil 104.00mil 0 100 ""]
 
 	)
 
-Element["" "MS5611" "U2" "MS5611" 108.00mil 279.00mil 3.00mil 177.00mil 3 100 ""]
+Element["" "MS5607" "U2" "MS5607" 108.00mil 279.00mil 3.00mil 177.00mil 3 100 ""]
 (
 	Pad[73.81mil 33.45mil 73.81mil 53.14mil 23.62mil 25.59mil 29.62mil "SCLK" "8" "square,edge2"]
 	Pad[73.81mil -53.15mil 73.81mil -33.46mil 23.62mil 25.59mil 29.62mil "VDD" "1" "square"]

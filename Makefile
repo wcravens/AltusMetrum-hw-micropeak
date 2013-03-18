@@ -27,6 +27,8 @@ partslist.mouser: $(PROJECT).sch Makefile $(SCHEME)/gnet-partslist-bom.scm
 muffin-5267.pdf: partslist.csv $(AM)/glabels/muffin-5267.glabels
 	glabels-3-batch $(AM)/glabels/muffin-5267.glabels -i partslist.csv -o muffin-5267.ps && ps2pdf muffin-5267.ps && rm muffin-5267.ps
 
+$(PROJECT).pcb: pcb
+
 pcb:	$(PROJECT).sch project Makefile
 	gsch2pcb project
 

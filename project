@@ -6,8 +6,8 @@ schematics	micropeak.sch
 # are derived from the first listed schematic...
 output-name	micropeak
 
-elements-dir packages
-elements-dir /usr/share/pcb
+elements-dir ../altusmetrum/packages
+#elements-dir /usr/share/pcb
 
 # stick to newlib elements, don't use the older/odder m4 stuff
 skip-m4

@@ -20,13 +20,13 @@ loadstatus=smt
 C 52300 45500 1 0 1 MS5607.sym
 {
 T 50905 47695 5 10 1 1 0 6 1
-value=MS5611
+value=MS5607
 T 50905 47695 5 10 0 1 0 6 1
 device=IC
 T 52005 47695 5 10 1 1 0 6 1
 refdes=U2
 T 52305 42295 5 10 0 1 0 6 1
-footprint=MS5611
+footprint=MS5607
 T 52305 42295 5 10 0 1 0 6 1
 vendor=measspec
 T 52305 42295 5 10 0 1 0 6 1
