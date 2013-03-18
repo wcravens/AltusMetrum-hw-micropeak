@@ -30,7 +30,7 @@ boards at a time.
 	2.2 Load parts on each board. I do them in this order:
 
 		1. 100k reset capacitor
-		2. 470 LED current limiting capacitor
+		2. 470 LED current limiting resistor
 		3. Power switch
 		4. CPU
 		5. CPU bypass cap
@@ -75,23 +75,25 @@ boards at a time.
 	5.1 Flow a small amount of solder onto the center conductor pad so
 	    that it is raised high enough to hit the battery terminal.
 
-	5.2 Take the metal battery holder cage, align to the circuit board and
+	5.2 Clean the resulting pad with isopropyl alcohol
+	
+	5.3 Take the metal battery holder cage, align to the circuit board and
 	    clamp the ATtiny85 end in a vise whose jaws are horizontal. This
 	    end has enough board surface on the parts side to allow clamping,
 	    especially if you align the bypass cap inside a gap in the vise
 	    jaws.
 
-	5.3 Press down on the battery holder so that the exposed terminal
+	5.4 Press down on the battery holder so that the exposed terminal
 	    makes firm contact with the PCB pad. Solder in place.
 
-	5.4 Remove from vise.
+	5.5 Remove from vise.
 
-	5.5 With the vise jaws vertical again, place the board in the end of
+	5.6 With the vise jaws vertical again, place the board in the end of
 	    the vise with the remaining battery holder terminal exposed.
 
-	5.6 Solder in place.
+	5.7 Solder in place.
 
-	5.7 Load battery into plastic tray, install in battery holder
+	5.8 Load battery into plastic tray, install in battery holder
 
 6. System test
 

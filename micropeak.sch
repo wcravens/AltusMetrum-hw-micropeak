@@ -1,5 +1,5 @@
-v 20110115 2
-C 40000 40000 0 0 0 title-B.sym
+v 20121123 2
+C 40000 40000 0 0 0 title-B-keithp.sym
 C 42000 44500 1 0 0 attiny85.sym
 {
 T 41995 44475 5 10 0 1 0 0 1
@@ -17,7 +17,7 @@ vendor_part_number=ATTINY85-20MU-ND
 T 41995 44475 5 10 0 1 0 0 1
 loadstatus=smt
 }
-C 52300 45500 1 0 1 MS5611.sym
+C 52300 45500 1 0 1 MS5607.sym
 {
 T 50905 47695 5 10 1 1 0 6 1
 value=MS5611
@@ -30,11 +30,11 @@ footprint=MS5611
 T 52305 42295 5 10 0 1 0 6 1
 vendor=measspec
 T 52305 42295 5 10 0 1 0 6 1
-vendor_part_number=MS5611
+vendor_part_number=MS5607
 T 52305 42295 5 10 0 1 0 6 1
 loadstatus=smt
 }
-C 42300 43300 1 270 0 battery-1.sym
+C 42300 43300 1 270 0 battery.sym
 {
 T 43200 43000 5 10 0 0 270 0 1
 device=BATTERY
@@ -51,13 +51,13 @@ vendor_part_number=BHX1-1025-SM-ND
 T 42300 43300 5 10 0 0 270 0 1
 loadstatus=smt
 }
-C 42300 43500 1 0 0 3.3V-plus-1.sym
-C 52600 47300 1 0 0 3.3V-plus-1.sym
-C 41300 47000 1 0 0 3.3V-plus-1.sym
-C 41400 44700 1 0 0 gnd-1.sym
-C 52700 45400 1 0 0 gnd-1.sym
+C 42300 43500 1 0 0 3.3V-plus.sym
+C 52600 47300 1 0 0 3.3V-plus.sym
+C 41300 47000 1 0 0 3.3V-plus.sym
+C 41400 44700 1 0 0 gnd.sym
+C 52700 45400 1 0 0 gnd.sym
 N 41500 45000 41500 46100 4
-C 41700 46100 1 90 0 capacitor-1.sym
+C 41700 46100 1 90 0 capacitor.sym
 {
 T 41000 46300 5 10 0 0 90 0 1
 device=CAPACITOR
@@ -102,7 +102,7 @@ N 48900 46900 50000 46900 4
 N 50000 46900 50000 47300 4
 N 52800 45700 52300 45700 4
 N 52800 47300 52300 47300 4
-C 52600 47300 1 270 0 capacitor-1.sym
+C 52600 47300 1 270 0 capacitor.sym
 {
 T 53300 47100 5 10 0 0 270 0 1
 device=CAPACITOR
@@ -134,7 +134,7 @@ N 47500 45000 47800 45000 4
 T 47500 45100 5 10 1 1 0 0 1
 netname=\_reset\_
 }
-C 48400 45000 1 0 0 led-2.sym
+C 48400 45000 1 0 0 led.sym
 {
 T 48700 45300 5 10 1 1 180 0 1
 refdes=D1
@@ -151,7 +151,7 @@ vendor_part_number=475-1178-1-ND
 T 48400 45000 5 10 0 1 90 0 1
 loadstatus=smt
 }
-C 47500 45400 1 0 0 resistor-1.sym
+C 47500 45400 1 0 0 resistor.sym
 {
 T 47800 45800 5 10 0 0 0 0 1
 device=RESISTOR
@@ -246,10 +246,10 @@ T 46100 41800 5 10 1 1 0 0 1
 netname=\_reset\_
 }
 N 46100 41400 46700 41400 4
-C 46000 41100 1 0 0 gnd-1.sym
+C 46000 41100 1 0 0 gnd.sym
 N 46700 43000 46100 43000 4
-C 45900 43000 1 0 0 3.3V-plus-1.sym
-C 46700 41300 1 0 0 pico-ezmate-6.sym
+C 45900 43000 1 0 0 3.3V-plus.sym
+C 46700 41300 1 0 0 conn-6.sym
 {
 T 47055 43595 5 10 1 1 0 0 1
 refdes=J1
@@ -260,10 +260,10 @@ device=CONNECTOR
 T 46695 41275 5 10 0 1 0 0 1
 value=6-pin
 }
-C 51300 44400 1 0 0 3.3V-plus-1.sym
+C 51300 44400 1 0 0 3.3V-plus.sym
 N 48400 45500 48400 45100 4
-C 49200 44800 1 0 0 gnd-1.sym
-C 49100 45600 1 0 0 resistor-1.sym
+C 48700 44800 1 0 0 gnd.sym
+C 49100 45600 1 0 0 resistor.sym
 {
 T 49400 46000 5 10 0 0 0 0 1
 device=RESISTOR
@@ -300,9 +300,9 @@ device=SWITCH
 T 43400 41000 5 10 0 0 180 6 1
 value=SPDT
 }
-C 42700 41100 1 0 0 gnd-1.sym
+C 42700 41100 1 0 0 gnd.sym
 N 42800 41400 42800 41500 4
-C 43200 42500 1 90 0 resistor-1.sym
+C 43200 42500 1 90 0 resistor.sym
 {
 T 42800 42800 5 10 0 0 90 0 1
 device=RESISTOR
