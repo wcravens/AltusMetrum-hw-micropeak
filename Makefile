@@ -64,6 +64,29 @@ $(PROJECT).zip: $(PROJECT).gerb $(PROJECT).xy
 stencil:	$(PROJECT).gerb
 	zip $(PROJECT)-stencil.zip $(PROJECT).toppaste.gbr $(PROJECT).outline.gbr
 
+PDF=$(PROJECT)-sch.pdf $(PROJECT)-pcb.pdf
+
+PS=$(PROJECT)-sch.ps $(PROJECT)-pcb.ps
+
+pdf: $(PDF)
+
+png: $(PROJECT)-sch.png
+
+$(PROJECT)-sch.png: $(PROJECT)-sch.pdf
+	pdftoppm -r 75 $(PROJECT)-sch.pdf | pnmtopng > $(PROJECT)-sch.png
+
+$(PROJECT)-sch.pdf: $(PROJECT)-sch.ps
+	ps2pdf $(PROJECT)-sch.ps
+
+$(PROJECT)-pcb.pdf: $(PROJECT)-pcb.ps
+	ps2pdf $(PROJECT)-pcb.ps
+
+$(PROJECT)-sch.ps: $(PROJECT).sch
+	gschem -p -o $@ -s /usr/share/gEDA/scheme/print.scm  $(PROJECT).sch
+
+$(PROJECT)-pcb.ps: $(PROJECT).pcb
+	pcb -x ps --ps-color --psfile $(PROJECT)-pcb.ps --media Letter $(PROJECT).pcb
+
 clean:
 	rm -f *.bom *.drc *.log *~ $(PROJECT).ps *.gbr $(PROJECT).gerb *.cnc *bak* *- *.zip 
 	rm -f *.net *.xy *.cmd *.png partslist partslist.csv partslist.dk partslist.mouser muffin-5267.pdf
