@@ -1,4 +1,4 @@
-v 20121123 2
+v 20130925 2
 C 40000 40000 0 0 0 title-B-keithp.sym
 C 42000 44500 1 0 0 attiny85.sym
 {
@@ -164,7 +164,7 @@ value=470
 T 47500 45400 5 10 0 0 0 0 1
 vendor=digikey
 T 47500 45400 5 10 0 0 0 0 1
-vendor_part_number=311-470JRCT-ND
+vendor_part_number=P470LCT-ND
 T 47500 45400 5 10 0 0 0 0 1
 loadstatus=smt
 }
@@ -259,6 +259,8 @@ T 46695 41275 5 10 0 1 0 0 1
 device=CONNECTOR
 T 46695 41275 5 10 0 1 0 0 1
 value=6-pin
+T 46700 41300 5 10 0 1 0 0 1
+loadstatus=noload
 }
 C 51300 44400 1 0 0 3.3V-plus.sym
 N 48400 45500 48400 45100 4
@@ -274,7 +276,7 @@ value=4.7k
 T 49100 45600 5 10 0 1 0 0 1
 vendor=digikey
 T 49100 45600 5 10 0 1 0 0 1
-vendor_part_number=RC0402JR-074K7L
+vendor_part_number=P4.70KLCT-ND
 T 49100 45600 5 10 0 1 0 0 1
 loadstatus=smt
 T 49100 45600 5 10 0 1 0 0 1
@@ -313,7 +315,7 @@ value=100k
 T 43200 42500 5 10 0 1 0 0 1
 vendor=digikey
 T 43200 42500 5 10 0 1 0 0 1
-vendor_part_number=RMCF0402JT100KCT-ND
+vendor_part_number=P100KLCT-ND
 T 43200 42500 5 10 0 1 0 0 1
 loadstatus=smt
 T 43200 42500 5 10 0 1 0 0 1
