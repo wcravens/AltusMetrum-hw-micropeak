@@ -1210,10 +1210,6 @@ Layer(2 "bottom")
 	Line[407.00mil 252.00mil 350.00mil 309.00mil 25.00mil 20.00mil "clearline"]
 	Polygon("clearpoly")
 	(
-		[10.00mil 413.00mil] [90.00mil 413.00mil] [90.00mil 377.00mil] [10.00mil 377.00mil] 
-	)
-	Polygon("clearpoly")
-	(
 		[494.00mil 5.00mil] [206.00mil 5.00mil] [206.00mil 100.00mil] [494.00mil 100.00mil] 
 	)
 	Polygon("clearpoly")

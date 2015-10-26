@@ -85,10 +85,11 @@ $(PROJECT)-sch.ps: $(PROJECT).sch
 	gschem -p -o $@ -s /usr/share/gEDA/scheme/print.scm  $(PROJECT).sch
 
 $(PROJECT)-pcb.ps: $(PROJECT).pcb
-	pcb -x ps --ps-color --psfile $(PROJECT)-pcb.ps --media Letter $(PROJECT).pcb
+	pcb -x ps --fill-page --ps-color --psfile $(PROJECT)-pcb.ps --media Letter $(PROJECT).pcb
 
 clean:
 	rm -f *.bom *.drc *.log *~ $(PROJECT).ps *.gbr $(PROJECT).gerb *.cnc *bak* *- *.zip 
 	rm -f *.net *.xy *.cmd *.png partslist partslist.csv partslist.dk partslist.mouser muffin-5267.pdf
 	rm -f *.partslist *.new.pcb *.unsorted $(PROJECT).xls
+	rm -f $(PS) $(PDF)
 	rm -f $(PROJECT)-stencil.zip
