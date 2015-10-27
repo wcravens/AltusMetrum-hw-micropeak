@@ -941,7 +941,7 @@ Element["" "pico-ezmate-6" "J1" "6-pin" 350.00mil 531.00mil -3090.00mil 11.00mil
 
 	)
 
-Element["onsolder" "bhx1-1025-sm" "B1" "unknown" 350.00mil 309.00mil -305.00mil -202.00mil 0 100 "auto"]
+Element["onsolder" "bhx1-1025-sm" "B1" "3v" 350.00mil 309.00mil -305.00mil -202.00mil 0 100 "auto"]
 (
 	Pad[-295.00mil -50.00mil -295.00mil 50.00mil 100.00mil 10.00mil 105.00mil "+" "1" "onsolder,square,edge2"]
 	Pad[0.0000 0.0000 0.0000 0.0000 200.00mil 12.00mil 205.00mil "-" "2" "onsolder,square"]
